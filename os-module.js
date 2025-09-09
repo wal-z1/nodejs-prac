@@ -1,5 +1,4 @@
 const os = require("os");
-console.log(os);
 const CurrentOSInfo = {
 	type: os.type(),
 	Totalmemory: os.totalmem(),
