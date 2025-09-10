@@ -1,3 +1,7 @@
-const { readFileSync,writeFileSync } = require("fs");
+const { readFileSync, writeFileSync } = require("fs");
 
-{readFileSync}
+const TextOfirstFile = readFileSync("./sub/test_text1.txt", "utf8");
+const TextOfSecondFile = readFileSync("./sub/test_text2.txt", "utf8");
+
+console.log(TextOfirstFile);
+console.log(TextOfSecondFile);
