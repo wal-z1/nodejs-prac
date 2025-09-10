@@ -1,2 +1,2 @@
 # os-module-nodejs
-useless  just console logs 
+"useless for usage", only a practice repo check if interested
