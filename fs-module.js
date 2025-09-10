@@ -8,5 +8,8 @@ console.log(TextOfSecondFile);
 
 writeFileSync(
 	"./sub/ConcatOfTheTwoFiles.txt",
-	`\nhere is the concat ${TextOfirstFile} + ${TextOfSecondFile} `
+	`\nhere is the concat ${TextOfirstFile} + ${TextOfSecondFile} `,
+	{ flag: "a" }
 );
+const TextOfMix = readFileSync("./sub/ConcatOfTheTwoFiles.txt", "utf8");
+console.log(TextOfMix);
