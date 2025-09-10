@@ -21,4 +21,6 @@ readFile("./sub/test_text1.txt", "utf8", (err, res) => {
 		return;
 	}
 	console.log(res);
+	// do something to it if read like copying it
+	writeFileSync("./sub/copyoffirsttext.txt", `${res}`);
 });
