@@ -8,6 +8,7 @@ const servertest = http.createServer((req, res) => {
 		res.write("Hello world second");
 		res.end();
 	}
-	res.end("hey this page does not exist ");
+	res.end(`<h1>hey this page does not exist</h1>
+		<a href="/">Check here instead</a>`);
 });
 servertest.listen(5800);
