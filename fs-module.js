@@ -17,10 +17,16 @@ console.log(TextOfMix);
 
 readFile("./sub/test_text1.txt", "utf8", (err, res) => {
 	if (err) {
-		console.log(error);
+		console.log(err);
 		return;
 	}
 	console.log(res);
 	// do something to it if read like copying it
-	writeFileSync("./sub/copyoffirsttext.txt", `${res}`);
+	writeFile("./sub/copyoffirsttext.txt", `${res}`, (err, res) => {
+		if (err) {
+			console.log(err);
+			return;
+		}
+		console.log(res);
+	});
 });
