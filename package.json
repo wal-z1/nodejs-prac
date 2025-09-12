@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/wal-z1/nodejs-prac/issues"
   },
-  "homepage": "https://github.com/wal-z1/nodejs-prac#readme"
+  "homepage": "https://github.com/wal-z1/nodejs-prac#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
 }

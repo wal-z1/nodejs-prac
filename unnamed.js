@@ -1,15 +1,14 @@
 const http = require("http");
 const servertest = http.createServer((req, res) => {
-	console.log(req);
 	if (req.url === "/") {
 		res.write("Hello world MAIN");
-		res.end();
-	} else if (req.url === "/second") {
-		res.write("Hello world second");
-		res.end();
+	} else if (req.url === "/about") {
+		res.write("wassap ppl");
 	}
-	res.end(`<h1>hey this page does not exist</h1>
-    <a href="/">Check here instead</a>`);
+
+	res.end();
 });
-servertest.listen(5800);
+servertest.listen(5800, () => {
+	console.log("makima is listening");
+});
 //
