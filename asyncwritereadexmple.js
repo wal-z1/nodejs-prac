@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+//using a promise normally
 const getxt = (path) => {
 	return new Promise((yes, no) => {
 		fs.readFile(path, "utf8", (err, txt) => {
@@ -11,6 +11,18 @@ const getxt = (path) => {
 		});
 	});
 };
-getxt("./sub/test_text1.txt")
-	.then((res) => console.log(res))
-	.catch((err) => console.log(err));
+
+//getxt("./sub/test_text1.txt")
+//.then((res) => console.log(res))
+// .catch((err) => console.log(err));
+
+// using async approuch
+const sure = async () => {
+	try {
+		const trying = await getxt("./sub/test_text1.txt");
+		console.log(trying);
+	} catch (error) {
+		console.log(error);
+	}
+};
+sure();
