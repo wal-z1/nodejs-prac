@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-prac",
+  "version": "1.0.0",
+  "description": "\"useless for usage\", only a practice repo check if interested",
+  "main": "fs-module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wal-z1/nodejs-prac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wal-z1/nodejs-prac/issues"
+  },
+  "homepage": "https://github.com/wal-z1/nodejs-prac#readme"
+}
