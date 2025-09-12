@@ -30,14 +30,15 @@ const sure = async () => {
 sure();
 */
 // using the promisify approch
-const WriteFilePromise = util.Promise(fs.writeFile);
-const readFilePromise = util.Promise(fs.readFile);
+const WriteFilePromise = util.promisify(fs.writeFile);
+const readFilePromise = util.promisify(fs.readFile);
 const sure = async () => {
 	try {
 		const trying = await readFilePromise("./sub/test_text1.txt", "utf8");
 		console.log(trying);
-		await WriteFilePromise("sub/asyncawitwritng.txt",utf8);
+		await WriteFilePromise("sub/asyncawitwritng.txt", "HELLLO");
 	} catch (error) {
 		console.log(error);
 	}
 };
+sure()
