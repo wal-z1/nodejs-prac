@@ -41,4 +41,4 @@ const sure = async () => {
 		console.log(error);
 	}
 };
-sure()
+sure();
