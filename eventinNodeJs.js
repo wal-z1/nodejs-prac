@@ -6,4 +6,8 @@ CreatedEvent.on("name", () => {
 	console.log("event triggred");
 });
 
-CreatedEvent.emit("name");
+CreatedEvent.on("name", (Var1, Var2) => {
+	console.log(`event triggred ${Var1} and here is ${Var2}`);
+});
+
+CreatedEvent.emit("name", 1, 6);
