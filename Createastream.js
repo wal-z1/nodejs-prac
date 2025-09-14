@@ -1,12 +1,14 @@
-const { createReadStream } = require("fs");
-const http = require("http");
-const thecreatedstreamfromafile = createReadStream("./sub/numbersfile.txt", {
-	encoding: "utf8",
-});
+let http = require("http");
+let fs = require("fs");
 
-thecreatedstreamfromafile.on("data", (always) => {});
-
-const server = http.createServer((req, res) => {
-	thecreatedstreamfromafile.pipe(res);
-});
-server.listen(5000);
+http
+	.createServer(function (req, res) {
+		const fileStream = fs.createReadStream("./content/big.txt", "utf8");
+		fileStream.on("open", () => {
+			fileStream.pipe(res);
+		});
+		fileStream.on("error", (err) => {
+			res.end(err);
+		});
+	})
+	.listen(5000);
