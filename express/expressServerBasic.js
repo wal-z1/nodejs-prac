@@ -13,3 +13,7 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
 	res.send("about pagen ahh");
 });
+
+app.all("*", (req, res) => {
+	res.send("<h1>error source not found</h1>");
+});
